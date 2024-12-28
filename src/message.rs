@@ -6,7 +6,7 @@ pub struct IpcMessage {
 }
 
 impl IpcMessage {
-    const SIZE_PER_MESSAGE: usize = std::mem::size_of::<IpcMessage>();
+    const SIZE_PER_MESSAGE: usize = size_of::<IpcMessage>();
 
     pub fn new(header: u8, data: [u8; 255]) -> Self {
         IpcMessage { header, data }

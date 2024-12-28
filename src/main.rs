@@ -1,5 +1,6 @@
 //! The tests here are all for shared memory spsc queues sending messages between threads. I don't
-//! care about process private memory, so I'm not going to test that.
+//! care about process private memory, so I'm not going to test that. This uses the RDTSC register
+//! to measure the time it takes to send messages between threads.
 
 use message::IpcMessage;
 use std::thread;
