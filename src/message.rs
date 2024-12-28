@@ -19,6 +19,13 @@ impl IpcMessage {
         for i in 0..vec_length {
             messages.push(IpcMessage::new(i as u8, [0; 255]));
         }
+
+        println!("Current capacity: {}", messages.capacity());
+        println!("Current length: {}", messages.len());
+
+        assert_eq!(messages.capacity(), vec_size);
+        println!("Vector capacity matches the expected size");
+
         messages
     }
 }

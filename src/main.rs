@@ -7,4 +7,6 @@ fn main() {
     let messages = IpcMessage::create_dummy_messages(10000);
 
     let handle_1 = thread::spawn(move || {});
+
+    handle_1.join().unwrap();
 }
