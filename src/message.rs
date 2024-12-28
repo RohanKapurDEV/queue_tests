@@ -1,4 +1,4 @@
-/// This is a simple IPC message struct that we will use to demonstrate the IPC communication
+/// This is a simple struct that we will use for ipc comms
 #[derive(Debug, Clone, Copy)]
 pub struct IpcMessage {
     pub header: u8,
